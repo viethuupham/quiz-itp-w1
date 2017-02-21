@@ -13,7 +13,7 @@ def question_1():
     d) Collection
     """
     # Return the correct value.
-    pass
+    return "Boolean"
 
 
 # Question 2
@@ -31,7 +31,7 @@ def question_2():
     e) "hello world"
     """
     # Return the correct value.
-    pass
+    return True
 
 
 # Question 3
@@ -46,7 +46,14 @@ def remove_Es(a_string):
     remove_Es('abc')      # 'abc'
     """
     # Write your code here
-    pass
+    # this is wrong lol
+    char = ''
+    for i in len(a_string):
+        if a_string(i) == 'E' or a_string(i) == 'e':
+            pass
+        else:
+            char += a_string(i)
+    return char
 
 
 # Question 4
@@ -63,7 +70,7 @@ def question_4():
     result = a_list[3**2 - 8] + a_list[-1] + a_tuple[2]
     """
     # Return the correct value.
-    pass
+    return 22
 
 
 # Question 5
@@ -86,7 +93,8 @@ def calculate_tax(income):
 
     income = 30000  # $30,000 is less than $50,000
     calculate_tax(income)  # $30,000 * 0.15  = 4500 = $4,500
-
+    
+    viet edit, this example below is wrong??? 
     income = 80000  # $80,000 is more than $75,000 but less than $80,000
     calculate_tax(income)  # $80,000 * 0.25 = 20000 = $20,000
 
@@ -94,7 +102,14 @@ def calculate_tax(income):
     calculate_tax(income)  # $210,000 * 0.35 = 73500 = $73,500
     """
     # Write your code here
-    pass
+    if income > 100000:
+        return income*0.35
+    elif income > 75000:
+        return income*0.3
+    elif income > 50000:
+        return income*0.25
+    elif income <= 50000:
+        return income*0.15
 
 
 # Question 6
@@ -118,4 +133,7 @@ def matrix_sum(a_matrix):
     matrix_sum(m2)  # 198
     """
     # Write your code here
-    pass
+    total = 0
+    for i in range(len(a_matrix)):
+        total += sum(a_matrix[i])
+    return total
